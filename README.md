@@ -1,6 +1,6 @@
 # EPR REPO — Multi-Tenant Cloud ERP Platform for MSMEs 🚀
 
-**OneBiz** is an intelligent, enterprise-grade Cloud ERP solution engineered to streamline end-to-end operational workflows for Micro, Small, and Medium Enterprises. Built with robust company-level multi-tenant isolation, role-based access control (RBAC), and predictive machine-learning intelligence.
+**EPR** is an intelligent, enterprise-grade Cloud ERP solution engineered to streamline end-to-end operational workflows for Micro, Small, and Medium Enterprises. Built with robust company-level multi-tenant isolation, role-based access control (RBAC), and predictive machine-learning intelligence.
 
 ---
 

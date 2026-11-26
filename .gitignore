@@ -1,0 +1,60 @@
+# =========================================================
+# OneBiz — Git Ignore Rules
+# =========================================================
+
+# Java & Maven
+target/
+**/target/
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+
+# Frontend & Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+dist-ssr/
+**/dist-ssr/
+*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Python & Virtual Environments
+.venv/
+**/.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# Local Database & Runtime Data
+data/
+*.db
+*.mv.db
+*.lock.db
+*.trace.db
+
+# Local Bundled Tools
+tools/
+
+# Logs & Temporary Files
+logs/
+*.log
+
+# IDE & Operating System
+.idea/
+.vscode/
+*.iml
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.DS_Store
+Thumbs.db
+
+cloud_erp/frontend/.env

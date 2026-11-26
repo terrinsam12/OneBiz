@@ -1,0 +1,738 @@
+/* =========================================================
+   ENTERPRISE AI DEMAND FORECAST & INVENTORY PROTECTION
+   ========================================================= */
+
+.forecast-page {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   EXECUTIVE HERO HEADER
+   ========================================================= */
+.forecast-hero-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: #ffffff;
+  padding: 24px 28px;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.forecast-hero-header h1 {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+}
+
+.forecast-hero-header p {
+  margin: 6px 0 0;
+  font-size: 14.5px;
+  color: #64748b;
+}
+
+.forecast-header-badges {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.forecast-badge-live {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forecast-badge-model {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+  background: #f5f3ff;
+  color: #6d28d9;
+  border: 1px solid #ddd6fe;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forecast-header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.forecast-company-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  font-size: 13.5px;
+  color: #334155;
+  font-weight: 600;
+}
+
+.forecast-company-pill strong {
+  color: #1e293b;
+}
+
+/* =========================================================
+   PRIMARY KPI CARDS (ENTERPRISE STATS GRID)
+   ========================================================= */
+.forecast-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.forecast-stat-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.forecast-stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px -4px rgba(0, 0, 0, 0.08);
+}
+
+.forecast-stat-card .stat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.forecast-stat-card .stat-header span {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #64748b;
+}
+
+.forecast-stat-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+.forecast-stat-icon.blue {
+  background: #eff6ff;
+  color: #2563eb;
+}
+
+.forecast-stat-icon.red {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.forecast-stat-icon.amber {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.forecast-stat-icon.purple {
+  background: #f5f3ff;
+  color: #7c3aed;
+}
+
+.forecast-stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.forecast-stat-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 10px;
+  border-top: 1px solid #f1f5f9;
+  font-size: 12.5px;
+  color: #64748b;
+}
+
+.forecast-trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.forecast-trend-badge.positive {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.forecast-trend-badge.warning {
+  background: #fffbeb;
+  color: #b45309;
+}
+
+.forecast-trend-badge.danger {
+  background: #fef2f2;
+  color: #b91c1c;
+}
+
+.forecast-trend-badge.purple {
+  background: #f5f3ff;
+  color: #6d28d9;
+}
+
+/* =========================================================
+   PREDICTIVE TIMELINE HORIZON CHART (PAST VS FUTURE)
+   ========================================================= */
+.forecast-chart-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 26px 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.forecast-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.forecast-card-header h3 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.01em;
+}
+
+.forecast-card-header p {
+  margin: 4px 0 0;
+  font-size: 13.5px;
+  color: #64748b;
+}
+
+.forecast-legend {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+.forecast-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+}
+
+.legend-swatch.actual {
+  background: #2563eb;
+}
+
+.legend-swatch.forecast {
+  background: #8b5cf6;
+}
+
+/* Horizon Bar Stage */
+.forecast-timeline-stage {
+  height: 260px;
+  display: flex;
+  align-items: flex-end;
+  gap: 14px;
+  padding: 26px 18px 14px;
+  background: linear-gradient(180deg, #fafbfc 0%, #ffffff 100%);
+  border-radius: 12px;
+  border: 1px solid #f1f5f9;
+  position: relative;
+}
+
+.forecast-timeline-stage::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 1px dashed #f1f5f9;
+  pointer-events: none;
+}
+
+.forecast-column-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  height: 100%;
+  gap: 8px;
+  position: relative;
+  z-index: 1;
+}
+
+.forecast-divider {
+  width: 2px;
+  height: 90%;
+  background: #cbd5e1;
+  border-left: 2px dashed #94a3b8;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+  z-index: 2;
+}
+
+.forecast-divider-badge {
+  position: absolute;
+  top: -12px;
+  background: #3b82f6;
+  color: #ffffff;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(37, 99, 235, 0.3);
+}
+
+.forecast-col-val {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #1e293b;
+  padding: 2px 6px;
+  border-radius: 5px;
+}
+
+.forecast-col-val.zero {
+  color: #94a3b8;
+}
+
+.forecast-col-val.forecast-val {
+  color: #6d28d9;
+  background: #f5f3ff;
+  border: 1px solid #ddd6fe;
+}
+
+.forecast-bar-track {
+  width: 100%;
+  max-width: 52px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.forecast-pillar {
+  width: 100%;
+  border-radius: 8px 8px 3px 3px;
+  transition: height 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+  cursor: pointer;
+}
+
+.forecast-pillar.actual {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+.forecast-pillar.actual:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.forecast-pillar.predicted {
+  background: linear-gradient(180deg, #a78bfa 0%, #7c3aed 100%);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
+}
+
+.forecast-pillar.predicted:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.forecast-pillar.zero {
+  background: #f1f5f9;
+  border: 1px dashed #cbd5e1;
+}
+
+.forecast-col-label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  text-align: center;
+}
+
+.forecast-col-sub {
+  font-size: 10.5px;
+  color: #94a3b8;
+  white-space: nowrap;
+}
+
+/* Horizon Insights Strip */
+.forecast-insights-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.forecast-insight-card {
+  padding: 14px 18px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.forecast-insight-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  flex-shrink: 0;
+}
+
+.forecast-insight-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.forecast-insight-content span {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #64748b;
+  letter-spacing: 0.04em;
+}
+
+.forecast-insight-content strong {
+  font-size: 14.5px;
+  font-weight: 800;
+  color: #0f172a;
+  margin-top: 2px;
+}
+
+.forecast-insight-content small {
+  font-size: 11.5px;
+  color: #64748b;
+  margin-top: 1px;
+}
+
+/* =========================================================
+   FORECAST MATRIX TABLE
+   ========================================================= */
+.forecast-table th {
+  padding: 14px 16px;
+  font-size: 11.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  background: #f8fafc;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.forecast-table td {
+  padding: 14px 16px;
+  font-size: 13.5px;
+  color: #1e293b;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: middle;
+}
+
+.forecast-table tr:hover td {
+  background: #fbfcfe;
+}
+
+.risk-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.risk-pill.high {
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fecaca;
+}
+
+.risk-pill.medium {
+  background: #fffbeb;
+  color: #d97706;
+  border: 1px solid #fde68a;
+}
+
+.risk-pill.low {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.forecast-method-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6366f1;
+  background: #eef2ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-top: 3px;
+}
+
+/* Depletion Runway Bar */
+.runway-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 140px;
+}
+
+.runway-track {
+  width: 100%;
+  height: 6px;
+  border-radius: 999px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.runway-fill {
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.runway-fill.safe {
+  background: #10b981;
+}
+
+.runway-fill.caution {
+  background: #f59e0b;
+}
+
+.runway-fill.critical {
+  background: #ef4444;
+}
+
+.runway-text {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #475569;
+}
+
+/* =========================================================
+   SCENARIO SIMULATION & STRESS TEST DRAWER
+   ========================================================= */
+.forecast-simulation-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 22px 26px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.simulation-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.simulation-header h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.simulation-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding: 16px 20px;
+  background: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #edf2f7;
+}
+
+.simulation-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.simulation-control-group label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.simulation-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.simulation-result-badge {
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* =========================================================
+   ALGORITHMIC TRANSPARENCY CARD
+   ========================================================= */
+.forecast-explainer-card {
+  background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+  border: 1px solid #bfdbfe;
+  border-radius: 14px;
+  padding: 24px 28px;
+}
+
+.explainer-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.explainer-title h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1e3a8a;
+}
+
+.explainer-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.explainer-step {
+  background: #ffffff;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #dbeafe;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.step-num {
+  font-size: 11px;
+  font-weight: 800;
+  color: #2563eb;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.step-heading {
+  font-size: 13px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.step-desc {
+  font-size: 12px;
+  color: #64748b;
+  line-height: 1.45;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .forecast-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .explainer-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .forecast-insights-strip {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .forecast-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .explainer-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .forecast-timeline-stage {
+    gap: 6px;
+    padding: 16px 8px 10px;
+  }
+}

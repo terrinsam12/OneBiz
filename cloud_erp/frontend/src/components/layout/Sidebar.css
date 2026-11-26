@@ -1,0 +1,301 @@
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  width: 275px;
+  height: 100vh;
+  max-height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: #111827;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  box-sizing: border-box;
+
+  /* IMPORTANT: sidebar itself scrolls */
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  z-index: 1000;
+}
+
+
+/* =========================================================
+   SIDEBAR SCROLLBAR
+   ========================================================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}
+
+
+/* =========================================================
+   LOGO / BRAND
+   ========================================================= */
+
+.sidebar-header {
+  padding: 24px;
+  min-height: 112px;
+
+  box-sizing: border-box;
+
+  border-bottom: 1px solid #273244;
+
+  flex-shrink: 0;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sidebar-logo {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 12px;
+  background: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  font-weight: 700;
+
+  flex-shrink: 0;
+}
+
+.sidebar-brand-text h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: white;
+}
+
+.sidebar-brand-text p {
+  margin: 8px 0 0;
+
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+
+/* =========================================================
+   SIDEBAR CONTENT
+   ========================================================= */
+
+.sidebar-content {
+  padding: 24px 15px 40px;
+
+  box-sizing: border-box;
+
+  /* IMPORTANT
+     Do NOT use flex: 1 here.
+     Let the content determine the sidebar height.
+  */
+  flex-shrink: 0;
+}
+
+
+/* =========================================================
+   ACTIVE COMPANY
+   ========================================================= */
+
+.active-company {
+  background: #1f2937;
+
+  border-radius: 14px;
+
+  padding: 24px 16px;
+
+  margin-bottom: 45px;
+
+  text-align: center;
+}
+
+.active-company-title {
+  margin-bottom: 14px;
+
+  color: #d1d5db;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+.active-company select {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 9px;
+
+  padding: 0 16px;
+
+  background: white;
+  color: #374151;
+
+  font-size: 15px;
+
+  outline: none;
+}
+
+.active-company-name {
+  margin-top: 14px;
+
+  color: #d1d5db;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   MENU SECTION TITLE
+   ========================================================= */
+
+.sidebar-section-title {
+  padding: 0 0 18px;
+
+  text-align: center;
+
+  color: #6b7280;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.sidebar-menu {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+
+/* =========================================================
+   MENU ITEM
+   ========================================================= */
+
+.sidebar-menu-item {
+  width: 100%;
+  min-height: 56px;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  text-decoration: none;
+
+  color: #9ca3af;
+
+  font-size: 16px;
+
+  transition: all 0.2s ease;
+
+  flex-shrink: 0;
+}
+
+.sidebar-menu-item:hover {
+  background: #1f2937;
+  color: white;
+}
+
+.sidebar-menu-item.active {
+  background: #2563eb;
+  color: white;
+}
+
+
+/* =========================================================
+   MENU ICON
+   ========================================================= */
+
+.sidebar-menu-icon {
+  width: 22px;
+  min-width: 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   BUSINESS INTELLIGENCE
+   ========================================================= */
+
+.business-intelligence {
+  margin-top: 30px;
+  padding-bottom: 30px;
+}
+
+.business-intelligence .sidebar-section-title {
+  text-align: center;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+  .sidebar {
+    width: 240px;
+  }
+}
+
+@media (max-width: 700px) {
+  .sidebar {
+    width: 220px;
+  }
+
+  .sidebar-header {
+    padding: 20px;
+  }
+
+  .sidebar-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
